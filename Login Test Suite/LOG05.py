@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -21,8 +23,11 @@ action.move_to_element(driver.find_element(By.XPATH, "//span[contains(normalize-
 action.perform()
 driver.find_element(By.XPATH, "//span[.='Giriş yap']").click()
 driver.find_element(By.XPATH, "//input[@id='ap_email']").send_keys("miraytest123@gmail.com")
-driver.find_element(By.XPATH, "//input[@id='continue']").click()
+driver.find_element(By.XPATH, "//input[@id='ap_email']").send_keys(Keys.TAB, Keys.ENTER)
 driver.find_element(By.XPATH, "//input[@id='ap_password']").send_keys("Test123.")
 driver.find_element(By.XPATH, "//input[@name='rememberMe']").click()
-driver.find_element(By.XPATH, "//input[@id='signInSubmit']").click()
-#Normal login code
+action.key_down(Keys.SHIFT).send_keys("TAB").key_up(Keys.SHIFT).perform()
+driver.find_element(By.XPATH, "//input[@id='signInSubmit']").send_keys(Keys.ENTER)
+
+#TAB and ENTER keys are working
+

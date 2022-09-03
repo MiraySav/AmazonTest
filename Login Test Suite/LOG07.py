@@ -22,7 +22,8 @@ action.perform()
 driver.find_element(By.XPATH, "//span[.='Giriş yap']").click()
 driver.find_element(By.XPATH, "//input[@id='ap_email']").send_keys("miraytest123@gmail.com")
 driver.find_element(By.XPATH, "//input[@id='continue']").click()
-driver.find_element(By.XPATH, "//input[@id='ap_password']").send_keys("Test123.")
+driver.find_element(By.XPATH, "//input[@id='ap_password']").send_keys("test123.")
 driver.find_element(By.XPATH, "//input[@name='rememberMe']").click()
 driver.find_element(By.XPATH, "//input[@id='signInSubmit']").click()
-#Normal login code
+
+#Changed the Password gives an error

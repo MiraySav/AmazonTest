@@ -20,8 +20,10 @@ driver.find_element(By.XPATH, "//input[@data-cel-widget='sp-cc-accept']").click(
 action.move_to_element(driver.find_element(By.XPATH, "//span[contains(normalize-space(),'Hesap ve Listeler')]"))
 action.perform()
 driver.find_element(By.XPATH, "//span[.='Giriş yap']").click()
-driver.find_element(By.XPATH, "//input[@id='ap_email']").send_keys("miraytest123@gmail.com")
+driver.find_element(By.XPATH, "//input[@id='ap_email']").send_keys("")
 driver.find_element(By.XPATH, "//input[@id='continue']").click()
 driver.find_element(By.XPATH, "//input[@id='ap_password']").send_keys("Test123.")
 driver.find_element(By.XPATH, "//input[@name='rememberMe']").click()
 driver.find_element(By.XPATH, "//input[@id='signInSubmit']").click()
+
+#No email entry gives an error
